@@ -40,6 +40,10 @@ button:active,
 
 .btn {
   border-radius: 10px;
+  cursor: pointer;
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
 
 .textarea {

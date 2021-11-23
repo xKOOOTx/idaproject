@@ -209,9 +209,21 @@ export default {
       font-size: 12px;
       line-height: 15px;
       color: $blackInputHeaders;
+      transition: background-color .2s ease-in-out, color .2s ease-in-out;
       &:disabled {
         background-color: $buttonDisabled;
         color: $greys;
+        &:hover, &:active {
+          background-color: $buttonDisabled;
+          color: $greys;
+        }
+      }
+      &:hover {
+        background-color: darken($backGround, 15%);
+      }
+      &:active {
+        background-color: darken($backGround, 60%);
+        color: lighten($blackInputHeaders, 70%);
       }
     }
     textarea {
