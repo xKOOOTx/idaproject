@@ -1,7 +1,7 @@
-export { default as IdaFilter } from '../..\\components\\ida-filter.vue'
-export { default as IdaHeader } from '../..\\components\\ida-header.vue'
-export { default as CatalogIdaCatalogItem } from '../..\\components\\Catalog\\ida-catalog-item.vue'
-export { default as Catalog } from '../..\\components\\Catalog\\index.vue'
+export const IdaFilter = () => import('../..\\components\\ida-filter.vue' /* webpackChunkName: "components/ida-filter" */).then(c => wrapFunctional(c.default || c))
+export const IdaHeader = () => import('../..\\components\\ida-header.vue' /* webpackChunkName: "components/ida-header" */).then(c => wrapFunctional(c.default || c))
+export const CatalogIdaCatalogItem = () => import('../..\\components\\Catalog\\ida-catalog-item.vue' /* webpackChunkName: "components/catalog-ida-catalog-item" */).then(c => wrapFunctional(c.default || c))
+export const Catalog = () => import('../..\\components\\Catalog\\index.vue' /* webpackChunkName: "components/catalog" */).then(c => wrapFunctional(c.default || c))
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
