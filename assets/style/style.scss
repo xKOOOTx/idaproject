@@ -1,0 +1,88 @@
+@import './variables';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: $black;
+  scroll-behavior: smooth;
+  background-color: $backGround;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, img, button {
+  display: block;
+}
+
+input,
+button,
+button:focus,
+button:active,
+.textarea,
+.textarea:focus,
+.textarea:active {
+  outline: none;
+  border: none;
+}
+
+.btn {
+  border-radius: 10px;
+}
+
+.textarea {
+  width: 100%;
+}
+
+.addSuccess {
+  display: flex!important;
+}
+
+.blur {
+  animation: deleteCatalogItem .5s ease-in-out;
+}
+
+.catalogBlur {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  filter: blur(4px);
+  background: $white;
+}
+
+@keyframes deleteCatalogItem {
+  from {
+    opacity: 1;
+    filter: blur(0);
+  }
+  to {
+    opacity: 0;
+    filter: blur(3px);
+  }
+}
+@keyframes addSuccess {
+  from {
+    opacity: 0;
+    display: none;
+  }
+  to {
+    opacity: 1;
+    display: block;
+  }
+
+}

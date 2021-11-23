@@ -1,0 +1,14 @@
+{
+  "IdaFilter": {
+    "description": "Auto imported from components/ida-filter.vue"
+  },
+  "IdaHeader": {
+    "description": "Auto imported from components/ida-header.vue"
+  },
+  "CatalogIdaCatalogItem": {
+    "description": "Auto imported from components/Catalog/ida-catalog-item.vue"
+  },
+  "Catalog": {
+    "description": "Auto imported from components/Catalog/index.vue"
+  }
+}

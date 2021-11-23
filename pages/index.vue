@@ -1,13 +1,23 @@
 <template>
-  <VCatalog />
+  <IdaCatalog />
 </template>
 
 <script>
-import VCatalog from '@/components/Catalog/'
+import { mapState } from 'vuex'
+import IdaCatalog from '@/components/Catalog/'
 
 export default {
   components: {
-    VCatalog
+    IdaCatalog
+  },
+  computed: mapState(['catalog']),
+  beforeMount () {
+    this.pushCatalogToLocal()
+  },
+  methods: {
+    pushCatalogToLocal () {
+      this.$store.commit('saveCatalogToLocalStorage')
+    }
   }
 }
 </script>
